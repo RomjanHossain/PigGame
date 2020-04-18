@@ -11,7 +11,7 @@ GAME RULES:
 let scores, roundScore, activePlayer, dice;
 scores = [0, 0];
 roundScore = 0;
-activePlayer = 1;
+activePlayer = 0;
 
 
 //setting img display to none
@@ -51,7 +51,24 @@ let diceRoll = document.querySelector('.btn-roll').addEventListener('click', () 
     // } else {
     //   imgDice.style.display = 'none';
     // }
-  });
+    const swapPlayer = () => {
+        if (activePlayer === 1) {
+            activePlayer = 0;
+        } else if (activePlayer == 0) {
+            activePlayer = 1;
+        }
+    };
+
+    if (dice !== 1) {
+        //add score
+        scores[activePlayer] += dice;
+        // console.log(roundScore);
+        document.querySelector('#current-' + activePlayer).textContent = scores[activePlayer];
+    } else {
+        // change player
+        swapPlayer();
+    }
+});
 
 
 // score of players
