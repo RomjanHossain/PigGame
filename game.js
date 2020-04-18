@@ -11,15 +11,47 @@ GAME RULES:
 let scores, roundScore, activePlayer, dice;
 scores = [0, 0];
 roundScore = 0;
-activePlayer = 0;
+activePlayer = 1;
 
-// generate random num 1-6
-dice = Math.floor(Math.random() * 6) + 1;
+
+//setting img display to none
+
+let imgDice = document.querySelector('.dice');
+imgDice.style.display = 'none';
 
 
 /// change score p1 p2
-let currentPlayer = document.querySelector('#current-' + activePlayer);
-currentPlayer.textContent = dice;
+let currentScoreP1 = document.getElementById('current-0').textContent = '0';
+let currentScoreP2 = document.getElementById('current-1').textContent = '0';
+let ScoreP0 = document.getElementById('score-0').textContent = '0';
+let ScoreP1 = document.getElementById('score-1').textContent = '0';
+
 //
-// let currentp1 =document.querySelector('#current-'+activePlayer);
-// currentp1.textContent = dice;
+
+//////////dice roll method
+let diceRoll = document.querySelector('.btn-roll').addEventListener('click', () => {
+    dice = Math.floor(Math.random() * 6) + 1;
+    console.log(dice);
+    imgDice.style.display = 'block';
+
+    //this all if else statement can be done as simple method
+    imgDice.src = 'img/dice-' + dice + '.png';
+    // if (dice === 1) {
+    //   imgDice.src = 'img/dice-1.png';
+    // } else if (dice === 2) {
+    //   imgDice.src = 'img/dice-2.png';
+    // } else if (dice === 3) {
+    //   imgDice.src = 'img/dice-3.png';
+    // } else if (dice === 4) {
+    //   imgDice.src = 'img/dice-4.png';
+    // } else if (dice === 5) {
+    //   imgDice.src = 'img/dice-5.png';
+    // } else if (dice === 6) {
+    //   imgDice.src = 'img/dice-6.png';
+    // } else {
+    //   imgDice.style.display = 'none';
+    // }
+  });
+
+
+// score of players
