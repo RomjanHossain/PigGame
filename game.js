@@ -26,7 +26,22 @@ let currentScoreP2 = document.getElementById('current-1').textContent = '0';
 let ScoreP0 = document.getElementById('score-0').textContent = '0';
 let ScoreP1 = document.getElementById('score-1').textContent = '0';
 
-//
+//swapPlayer function//
+const swapPlayer = () => {
+    imgDice.style.display = 'none';
+    roundScore = 0;
+    document.querySelector('#current-' + activePlayer).textContent = roundScore;
+    document.querySelector('.player-0-panel').classList.toggle('active');
+    document.querySelector('.player-1-panel').classList.toggle('active');
+    // activebtn.classList.remove('active');
+
+    if (activePlayer === 1) {
+      activePlayer = 0;
+    } else if (activePlayer == 0) {
+      activePlayer = 1;
+    }
+
+  };
 
 //////////dice roll method
 let diceRoll = document.querySelector('.btn-roll').addEventListener('click', () => {
@@ -51,24 +66,27 @@ let diceRoll = document.querySelector('.btn-roll').addEventListener('click', () 
     // } else {
     //   imgDice.style.display = 'none';
     // }
-    const swapPlayer = () => {
-        if (activePlayer === 1) {
-            activePlayer = 0;
-        } else if (activePlayer == 0) {
-            activePlayer = 1;
-        }
-    };
 
     if (dice !== 1) {
-        //add score
-        scores[activePlayer] += dice;
-        // console.log(roundScore);
-        document.querySelector('#current-' + activePlayer).textContent = scores[activePlayer];
+      //add score
+      roundScore += dice;
+      // scores[activePlayer] += dice;
+      // console.log(roundScore);
+      document.querySelector('#current-' + activePlayer).textContent = roundScore;
+
     } else {
-        // change player
-        swapPlayer();
+      swapPlayer();
+
     }
-});
+  });
 
 
+// btn hold//
+let btnhold = document.querySelector('.btn-hold').addEventListener('click', () => {
+    // console.log('ho');
+    scores[activePlayer] += roundScore;
+    document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
+
+    swapPlayer();
+  });
 // score of players

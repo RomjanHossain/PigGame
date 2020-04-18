@@ -4,7 +4,7 @@
   clear: both;
 }
 .container {
-  width: 1000px;
+  width: 100rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -23,9 +23,9 @@
 
 .active .player-name::after {
   content: "\2022";
-  font-size: 47px;
+  font-size: 4.7rem;
   position: absolute;
   color: #eb4d4d;
-  top: -7px;
-  right: 10px;
+  top: -0.7rem;
+  right: 1rem;
 }
