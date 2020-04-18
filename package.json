@@ -1,0 +1,22 @@
+{
+  "name": "piggame",
+  "version": "1.0.0",
+  "description": "This is just a game. I'm trying to practice my coding skills.",
+  "main": "index.js",
+  "scripts": {
+    "comp": "node-sass scss/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RomjanHossain/PigGame.git"
+  },
+  "author": "Romjan D. Hossain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RomjanHossain/PigGame/issues"
+  },
+  "homepage": "https://github.com/RomjanHossain/PigGame#readme",
+  "devDependencies": {
+    "node-sass": "^4.13.1"
+  }
+}
