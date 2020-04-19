@@ -55,7 +55,7 @@ button {
   color: #555;
   background: none;
   border: none;
-  font-family: Lato;
+  font-family: "Open Sans" sans-serif;
   font-size: 2rem;
   text-transform: uppercase;
   cursor: pointer;
@@ -92,4 +92,21 @@ button:focus {
 }
 .btn-hold {
   top: 46.7rem;
+}
+
+.final-score {
+  position: absolute;
+  left: 50%;
+  top: 52rem;
+  transform: translateX(-50%);
+  color: #555;
+  font-size: 1.8rem;
+  font-family: "Open Sans" sans-serif;
+  text-align: center;
+  padding: 1rem;
+  width: 16rem;
+  text-transform: uppercase;
+  &:focus {
+    outline: none;
+  }
 }
