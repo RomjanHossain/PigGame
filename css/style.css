@@ -31,6 +31,12 @@ body {
   font-weight: 300;
   color: #eb4d4d; }
 
+#dice-1 {
+  top: 12rem; }
+
+#dice-2 {
+  top: 25rem; }
+
 .player-0-panel,
 .player-1-panel {
   width: 50%;
@@ -81,7 +87,7 @@ button {
   color: #555;
   background: none;
   border: none;
-  font-family: Lato;
+  font-family: "Open Sans" sans-serif;
   font-size: 2rem;
   text-transform: uppercase;
   cursor: pointer;
@@ -115,6 +121,21 @@ button:focus {
 
 .btn-hold {
   top: 46.7rem; }
+
+.final-score {
+  position: absolute;
+  left: 50%;
+  top: 52rem;
+  transform: translateX(-50%);
+  color: #555;
+  font-size: 1.8rem;
+  font-family: "Open Sans" sans-serif;
+  text-align: center;
+  padding: 1rem;
+  width: 16rem;
+  text-transform: uppercase; }
+  .final-score:focus {
+    outline: none; }
 
 .clearfix::after {
   content: "";
